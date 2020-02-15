@@ -10,5 +10,8 @@ if type=="-u" or type =="-U":
         main.user_info(sys.argv[3],True)
     else:
         main.user_info(sys.argv[2],False)
+if  type=="e" or type=="E":
+    if sys.argv[2]==""
+
 
         

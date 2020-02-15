@@ -18,6 +18,21 @@ def user_info(user_id,flag):
     # print("\tClone URL: "+repo["clone_url"])
 
 
+def email_to_user(email_id):
+  userid = "https://api.github.com/search/users?q={}".format(email_id)
+  r = requests.get(userid)
+  users=json.loads(r.text)
+  if users["total_count"]!=1:
+    print("invalid email-id provided")
+    return 0
+  
+  user_id = users["items"][0][""] 
+
+
+
+
+
+
   user_url = "https://api.github.com/users/rishabhryber"
   r = requests.get(user_url)
   user = json.loads(r.text)
