@@ -1,6 +1,6 @@
 import requests
 import json
-
+from printer import *
 def user_info(user_id,flag):
   if flag:
     url = "https://api.github.com/users/{}/repos".format(user_id)
@@ -10,15 +10,12 @@ def user_info(user_id,flag):
       print(repo["name"])
       print("\tDescription: "+str(repo["description"]))
       print("\tOwner: "+str(repo["owner"]["login"]))
-      print("\tClone URL: "+repo["clone_url"])
-
       print("\tForks Count: "+str(repo["forks_count"]))
       print("\tWatch Count: "+str(repo["watchers_count"]))
-      print("\tClone URL: "+str(repo["clone_url"]))
-    # print("\tClone URL: "+repo["clone_url"])
 
 
-  user_url = "https://api.github.com/users/rishabhryber"
+
+  user_url = "https://api.github.com/users/{}".format(user_id)
   r = requests.get(user_url)
   user = json.loads(r.text)
   print("Name: "+str(user["name"]))
@@ -29,3 +26,18 @@ def user_info(user_id,flag):
   print("Public Repos Count: "+str(user["public_repos"]))
   print("Joined on : "+str(user["created_at"]))
   print("Last Active : "+str(user["updated_at"]))
+
+def email_to_id(email):
+  url = "https://api.github.com/search/users?q={}".format(email)
+  r = requests.get(url)
+  users = json.loads(r.text)
+  if users["total_count"] != 1:
+    print("Invalid email id provided")
+    return
+  user = users["items"][0]
+  email = user["login"]
+  return email
+  
+def show_man():
+  print_color("green","--------------------------------------------------------------------------------\n")
+  print()
