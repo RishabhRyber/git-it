@@ -1,9 +1,9 @@
 import sys
 import main
 argv=sys.argv
-if len(argv)==2 and argv[2]=="-h":
+if len(argv)==2 and argv[1]=="-h":
   main.show_man()
-if len(argv)  < 3:
+if len(argv)  < 2:
     print("Invalid number of arguments passed:")
     print("use pyhton git-it -h to get help")
     quit()
@@ -16,9 +16,11 @@ if type=="-u" or type =="-U":
         main.user_info(argv[2],False)
 if type == "-e" or type =="-E":
   if sys.argv[2] == "-r" or  sys.argv[2] == "-r":
+    main.show_logo()
     main.user_info(main.email_to_id(argv[3]),True)
   else:
-      main.user_info(main.email_to_id(argv[2]),False)
+    main.show_logo()
+    main.user_info(main.email_to_id(argv[2]),False)
 
 
       

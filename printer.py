@@ -27,4 +27,4 @@ def print_color(text="dummy",text_color="",back_color=""):
     back_color = Back.RESET
   
   print(text_color + back_color + text)
-print_color("jhejdfjdf","green")
+  print(Back.RESET+Fore.RESET+"",end="")
