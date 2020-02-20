@@ -13,32 +13,36 @@ Find information about all repositories of any user using his/her github id or e
  |___/
 
 ```
-What it information git-it can show:
+# What it information git-it can show:
   
  USER'S DETAILS:
 
-     Follower's count
-     Bio 
-     Location of User
-     Blog link if provided
-     Date of joining Github
-     Time of last activity
+     -Follower's count
+     -Bio 
+     -Location of User
+     -Blog link if provided
+     -Date of joining Github
+     -Time of last activity
 
-     Repository details:(All)
-         Title
-         Description 
-         Fork COunt
-         Blog link if provided
-         Date of joining Github
-         Time of last activity
+     -Repository details:(All)
+         -Title
+         -Description 
+         -Fork COunt
+         -Blog link if provided
+         -Date of joining Github
+         -Time of last activity
 
       
       
-  
+ # Setup:
+    1.git clone https://github.com/RishabhRyber/git-it
+    2.cd stardox
+    3.pip install -r requirements.txt
 
-  Usages: python git-it [options] [parameter]
-
-     Options:
+# Guide::
+```
+    Usages: python git-it [options] [parameter]
+      Options:
           -u, -U
              Use the github user-id is provided
         -e, -E
@@ -46,3 +50,4 @@ What it information git-it can show:
              Use the email id
         -r, -R
              Show repository details also
+```

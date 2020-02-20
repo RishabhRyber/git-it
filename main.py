@@ -2,6 +2,8 @@ import requests
 import json
 from printer import *
 import pyfiglet
+
+
 def user_info(user_id,flag):
   if flag:
     url = "https://api.github.com/users/{}/repos".format(user_id)
