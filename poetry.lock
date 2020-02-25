@@ -22,6 +22,22 @@ beautifulsoup4 = "*"
 
 [[package]]
 category = "main"
+description = "Cross-platform colored terminal text."
+name = "colorama"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "0.4.3"
+
+[[package]]
+category = "main"
+description = "Pure-python FIGlet implementation"
+name = "pyfiglet"
+optional = false
+python-versions = "*"
+version = "0.8.post1"
+
+[[package]]
+category = "main"
 description = "A modern CSS selector implementation for Beautiful Soup."
 name = "soupsieve"
 optional = false
@@ -29,10 +45,12 @@ python-versions = "*"
 version = "1.9.5"
 
 [metadata]
-content-hash = "6c4a3eb94c3ca9685f4f42f55ae678df4cbe41026773efa9df668f7c155337b7"
+content-hash = "ac94634a1606936aba4934cba67b7d50fab50a9c5f932d1f5bdcacd9f7b4302b"
 python-versions = "^3.7"
 
 [metadata.hashes]
 beautifulsoup4 = ["05fd825eb01c290877657a56df4c6e4c311b3965bda790c613a3d6fb01a5462a", "9fbb4d6e48ecd30bcacc5b63b94088192dcda178513b2ae3c394229f8911b887", "e1505eeed31b0f4ce2dbb3bc8eb256c04cc2b3b72af7d551a4ab6efd5cbe5dae"]
 bs4 = ["36ecea1fd7cc5c0c6e4a1ff075df26d50da647b75376626cc186e2212886dd3a"]
+colorama = ["7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff", "e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"]
+pyfiglet = ["c6c2321755d09267b438ec7b936825a4910fec696292139e664ca8670e103639", "d555bcea17fbeaf70eaefa48bb119352487e629c9b56f30f383e2c62dd67a01c"]
 soupsieve = ["bdb0d917b03a1369ce964056fc195cfdff8819c40de04695a80bc813c3cfa1f5", "e2c1c5dee4a1c36bcb790e0fabd5492d874b8ebd4617622c4f6a731701060dda"]
