@@ -57,3 +57,17 @@ def show_logo():
   print_color("-------------------------------------************--------------------------------\n","red")
   banner = pyfiglet.figlet_format("git - it")
   print_color("    "+banner,"green")
+
+def repo_url_to_info(strurl,flag):
+  str1=strurl.split("/")
+  username=str1[3]
+  repo=str1[4]
+  if flag==0:
+    user_info(username,0)
+  elif flag==1:
+    user_info(username,1)
+
+
+
+
+

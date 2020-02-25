@@ -21,6 +21,10 @@ if type == "-e" or type =="-E":
   else:
     main.show_logo()
     main.user_info(main.email_to_id(argv[2]),False)
-
+if type=="-url" or type=="-URL":
+  if len(argv)==4:
+    main.repo_url_to_info(argv[3],1)
+  else:
+    main.repo_url_to_info(argv[3],0)
 
       
