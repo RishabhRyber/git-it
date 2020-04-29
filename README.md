@@ -36,7 +36,7 @@ Find information about all repositories of any user using his/her github id or e
       
  # Setup:
     1.git clone https://github.com/RishabhRyber/git-it
-    2.cd stardox
+    2.cd git-it
     3.pip install -r requirements.txt
 
 # Guide::
